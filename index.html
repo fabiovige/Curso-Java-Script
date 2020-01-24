@@ -4,22 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Estruturas de repetição</title>
+    <title>Intervalo e timeout</title>
 </head>
 <body>
     <script>
-        
-        for (var i = 0; i <= 100; i++) {
-            //console.log(i);
+
+        function exibeAlgo() {
+            console.log('Olá Mundo!');
         }
+ 
+        //setInterval(exibeAlgo, 1000);
 
-        var j = 87668787;
-        while (j > 50) {
-            console.log(j);
-            j /= 5;
-        }
-
-
+        setTimeout(exibeAlgo, 5000);
 
     </script>
 </body>

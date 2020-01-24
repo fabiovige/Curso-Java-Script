@@ -4,18 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Intervalo e timeout</title>
+    <title>Eventos inline</title>
 </head>
 <body>
+
+    <div id="app">
+        <button onclick="mostraAlerta()">clique</button>
+        <button onmouseover="mostraAlerta()">passe</button>
+        <input type="text" onkeypress="mostraAlerta()" />
+    </div>
+
     <script>
 
-        function exibeAlgo() {
-            console.log('Olá Mundo!');
+        function mostraAlerta(){
+            alert('OK, botão acionado!');
         }
- 
-        //setInterval(exibeAlgo, 1000);
 
-        setTimeout(exibeAlgo, 5000);
+
 
     </script>
 </body>

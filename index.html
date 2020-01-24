@@ -4,40 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Condicionais</title>
+    <title>Operadores lógicos</title>
 </head>
 <body>
     <script>
-        function retornaSexo(sexo) {
-            // M, F
-            // Masculino, Feminino
+        // AND , OR, NOT
 
-            /*
-            if (sexo === 'M') {
-                return 'Masculino';
-            } else if (sexo === 'F') {
-                return 'Feminino';
-            }else {
-                return 'Outros';
-            }
+        var sexo = 'F', idade = '39';
 
-            */
-
-            switch(sexo) {
-                case 'M':
-                    return 'Masculino';
-                case 'F':
-                    return 'Feminino';
-                default:
-                    return 'Outros';
-            }
-
+        if(sexo == 'M' || idade > 40) {
+            console.log('OK 1');
         }
 
+        if (sexo !== 'M') {
+            console.log('OK 2');
+        }
 
+        var masculino;
 
-        var resultado = retornaSexo('ssss');
-        console.log(resultado);
+        if (sexo === 'F') {
+            masculino = true;
+        } else {
+            masculino = false;
+        }
+
+        console.log(masculino);
+
+        var masculino2 = (sexo === 'M');
+
+        console.log(masculino2);
+
     </script>
 </body>
 </html>

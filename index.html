@@ -4,35 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Operadores lógicos</title>
+    <title>Condição ternária</title>
 </head>
 <body>
     <script>
-        // AND , OR, NOT
+        
+        var sexo = 'M';
 
-        var sexo = 'F', idade = '39';
+        var retorno = (sexo === 'M') ? 'Masculino' : 'Feminino';
 
-        if(sexo == 'M' || idade > 40) {
-            console.log('OK 1');
-        }
-
-        if (sexo !== 'M') {
-            console.log('OK 2');
-        }
-
-        var masculino;
-
-        if (sexo === 'F') {
-            masculino = true;
-        } else {
-            masculino = false;
-        }
-
-        console.log(masculino);
-
-        var masculino2 = (sexo === 'M');
-
-        console.log(masculino2);
+        console.log(retorno);
 
     </script>
 </body>

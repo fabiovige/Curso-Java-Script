@@ -4,16 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Funções</title>
+    <title>Condicionais</title>
 </head>
 <body>
     <script>
-        function soma(numero1, numero2) {
-            var resultado = numero1 + numero2;
-            return resultado;
+        function retornaSexo(sexo) {
+            // M, F
+            // Masculino, Feminino
+
+            /*
+            if (sexo === 'M') {
+                return 'Masculino';
+            } else if (sexo === 'F') {
+                return 'Feminino';
+            }else {
+                return 'Outros';
+            }
+
+            */
+
+            switch(sexo) {
+                case 'M':
+                    return 'Masculino';
+                case 'F':
+                    return 'Feminino';
+                default:
+                    return 'Outros';
+            }
+
         }
 
-        var resultado = soma(1, 2);
+
+
+        var resultado = retornaSexo('ssss');
         console.log(resultado);
     </script>
 </body>

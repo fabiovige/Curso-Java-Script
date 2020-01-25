@@ -4,28 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Lidando com elementos</title>
+    <title>Alterando estilos</title>
 </head>
 <body>
 
     <div id="app">
-        <input type="text" id="nome">
+        <div class="box"></div>
     </div>
 
     <script>
-        var linkElement = document.createElement('a');
-        linkElement.setAttribute('href', 'https://fabiovige.com');
-        linkElement.setAttribute('title', 'Fabio Vige');
+        var boxElement = document.querySelector('.box');
+        
+        boxElement.style.width = '100px';
+        boxElement.style.height = '100px';
+        boxElement.style.backgroundColor = '#f00';
 
-        var textElement = document.createTextNode('Acessar meu site');
-
-        linkElement.appendChild(textElement);
-
-        var appElement = document.querySelector('#app');
-        appElement.appendChild(linkElement);
-
-        var inputElement = document.querySelector('#nome');
-        appElement.removeChild(inputElement); 
+        console.log(boxElement);
     </script>
 </body>
 </html>

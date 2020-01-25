@@ -4,24 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Eventos inline</title>
+    <title>Trabalhando com a DOM</title>
 </head>
 <body>
 
     <div id="app">
-        <button onclick="mostraAlerta()">clique</button>
-        <button onmouseover="mostraAlerta()">passe</button>
-        <input type="text" onkeypress="mostraAlerta()" />
+        <input type="text" name="nome" id="nome" class="nome" />
+        <button class="botao">Adicionar</button>
     </div>
 
     <script>
+        var inputElement = document.getElementById('nome');
+        var inputElement = document.getElementsByTagName('input');
+        var inputElement = document.getElementsByClassName('nome');
+        var inputElement = document.querySelector('div#app input');
+        var inputElement = document.querySelector('input[name=nome]');
+        console.log(inputElement);
 
-        function mostraAlerta(){
-            alert('OK, botão acionado!');
+
+        var btnElement = document.querySelector('button.botao');
+        btnElement.onclick = function() {
+            var text = inputElement.value;
+            alert('botao clicado ' + text);
         }
-
-
-
+        console.log(btnElement);
     </script>
 </body>
 </html>

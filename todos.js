@@ -15,7 +15,17 @@ function renderTodos() {
         var todoElement = document.createElement('li');
         var todoText = document.createTextNode(todo);
 
+        var linkElement = document.createElement('a');
+        linkElement.setAttribute('href','#');
+
+        var pos = todos.indexOf(todo);
+
+        var linkText = document.createTextNode('Excluir');
+        linkElement.appendChild(linkText);
+        linkElement.setAttribute('onclick', 'deleteTodo(' + pos + ')');
+
         todoElement.appendChild(todoText);
+        todoElement.appendChild(linkElement);
         listElement.appendChild(todoElement);
     }
 }
@@ -32,3 +42,8 @@ function addTodo() {
 }
 
 buttonElement.onclick = addTodo;
+
+function deleteTodo(pos) {
+    todos.splice(pos, 1);
+    renderTodos();
+}
